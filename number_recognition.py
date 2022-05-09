@@ -21,9 +21,9 @@ for k in ks:
 final_model = KNeighborsClassifier(n_neighbors=3)
 final_model.fit(digits.data, digits.target)
 
-plt.plot(scores, ks)
-plt.xlabel('accuracy')
-plt.ylabel('k')
+plt.plot(ks, scores)
+plt.xlabel('k')
+plt.ylabel('accuracy')
 plt.show()
 
 filename = 'knn_model_pickle.sav'
